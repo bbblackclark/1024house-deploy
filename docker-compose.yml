@@ -1,0 +1,47 @@
+services:
+  mongodb:
+
+    image: crpi-z8udkbz1m8yhycg8.cn-shanghai.personal.cr.aliyuncs.com/1024house-license/mongo:4.4
+    container_name: mongodb-1024house-demo
+    restart: always
+    volumes:
+      - mongodb_data_demo:/data/db
+    networks:
+      - 1024house-net-demo
+
+  app:
+
+    image: crpi-z8udkbz1m8yhycg8.cn-shanghai.personal.cr.aliyuncs.com/1024house-license/1024house-app:latest
+    container_name: 1024house-app-demo
+    restart: always
+    depends_on:
+      - mongodb
+    user: root
+    ports:
+      - "21028:21027"
+    volumes:
+      - license_data_demo:/data
+      - uploads_data:/app/uploads
+      - album_data:/app/album
+      - album_baby_data:/app/album-baby
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/1024house
+      - PORT=21027
+      - SESSION_SECRET=your-secret-key
+      - ADMIN_USERS=boy,girl
+      - DEFAULT_ADMIN_USERNAMES=feifei,jiajia
+      - DEFAULT_ADMIN_PASSWORDS=123456,123456
+      - ACTIVATION_KEY=4F9BB332F94DA75A
+    networks:
+      - 1024house-net-demo
+
+networks:
+  1024house-net-demo:
+    driver: bridge
+
+volumes:
+  mongodb_data_demo:
+  license_data_demo:
+  uploads_data:
+  album_data:
+  album_baby_data:
