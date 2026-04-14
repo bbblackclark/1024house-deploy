@@ -1,9 +1,15 @@
-# 1024House · 情侣私密系统
+<!-- 
+keywords: 自托管, 情侣系统, Docker, 礼账本, 宝宝成长, 疫苗提醒, 实时聊天，本地部署情侣应用，情侣应用，家庭应用，本地部署
+description: 1024House 是一款可私有部署的情侣关系管理工具，支持时光记录、礼账、宝宝成长、疫苗提醒、实时聊天。数据完全由你掌控，Docker 一键部署。
+-->
 
-> 跑在你自己的服务器上，数据完全由你掌控。 30 天免费试用。
+# 1024House · 情侣私密系统&家庭系统
+
+> 跑在你自己的服务器上，数据完全由你掌控。30 天免费试用。
 
 [![Docker](https://img.shields.io/badge/docker-一键部署-blue)](https://www.docker.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/bbblackclark/1024house-deploy)](https://github.com/bbblackclark/1024house-deploy/stargazers)
 
 ## ✨ 功能特性
 
