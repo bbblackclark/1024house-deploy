@@ -30,17 +30,17 @@
 
 ### 2. 下载配置文件
 wget https://raw.githubusercontent.com/bbblackclark/1024house-deploy/main/docker-compose.yml
-3. 启动服务
+### 3. 启动服务
 bash
 docker-compose up -d
-4. 访问
+### 4. 访问
 浏览器打开 http://本机IP:21028/login.html（如果你修改了端口，请使用对应的端口，建议部署的电脑或nas设置固定IP，需外网访问可自行研究下网络穿透或者申请公网ip）
 
  输入自己的账号密码
 - DEFAULT_ADMIN_USERNAMES=feifei,jiajia
 - DEFAULT_ADMIN_PASSWORDS=123456,123456
 - 在yam文件中初始化账号密码，可在yam中修改
-❓ 常见问题
+### ❓ 常见问题
 Q：数据存储在哪里？
 A：所有数据保存在 Docker 卷中（mongodb_data、uploads_data、album_data 等），请定期备份这些目录。
 
